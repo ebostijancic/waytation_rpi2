@@ -5,7 +5,7 @@ version =
   |> File.read!
   |> String.strip
 
-pkg = :nerves_system_rpi2
+pkg = :waytation_rpi2
 
 config pkg, :nerves_env,
   type:  :system,

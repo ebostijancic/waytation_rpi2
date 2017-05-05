@@ -1,4 +1,4 @@
-defmodule NervesSystemRpi2.Mixfile do
+defmodule WaytationRpi2.Mixfile do
   use Mix.Project
 
   @version Path.join(__DIR__, "VERSION")
@@ -6,9 +6,9 @@ defmodule NervesSystemRpi2.Mixfile do
     |> String.strip
 
   def project do
-    [app: :nerves_system_rpi2,
+    [app: :waytation_rpi2,
      version: @version,
-     elixir: "~> 1.3",
+     elixir: "~> 1.4",
      compilers: Mix.compilers ++ [:nerves_package],
      description: description(),
      package: package(),
@@ -29,13 +29,14 @@ defmodule NervesSystemRpi2.Mixfile do
   defp description do
     """
     Nerves System - Raspberry Pi 2 B
+    Waytation Extensions (Bluetooth, InfluxDB, Telegraf)
     """
   end
 
   defp package do
-    [maintainers: ["Frank Hunleth", "Justin Schneck"],
+    [maintainers: ["Emil Bostijancic"],
     files: ["LICENSE", "mix.exs", "nerves_defconfig", "nerves.exs", "README.md", "VERSION", "rootfs-additions", "fwup.conf", "cmdline.txt", "linux-4.4.defconfig", "config.txt", "post-createfs.sh"],
      licenses: ["Apache 2.0"],
-     links: %{"Github" => "https://github.com/nerves-project/nerves_system_rpi2"}]
+     links: %{"Github" => "https://github.com/ebostijancic/waytation_rpi2"}]
   end
 end
